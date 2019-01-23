@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="orderApp">
+
+<head>
+<meta charset="utf-8" />
+<title>AngularJS Plunker</title>
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<script
+	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+<script
+	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script>
+<script src="app.js"></script>
+</head>
+
+<body ng-controller="newOrderCntrl">
+	
+		<form ng-submit="addNewOrder()">
+			<table class="table">
+				<tr class="active">
+					<td class="col-md-3"> Order Desc	</td>
+					<td class="col-md-3">
+						<input type="text" ng-model="desc" />
+					</td>
+					<td class="col-md-3"></td>
+					<td class="col-md-3"></td>
+				</tr>
+								
+				<tr class="success">
+					<td class="col-md-3"> Order Amount	</td>
+					<td class="col-md-3">
+						<input type="text" ng-model="amt" />
+					</td>
+					<td class="col-md-3"></td>
+					<td class="col-md-3"></td>
+				</tr>
+				<tr>
+					<td>
+						<input type="submit" value="Place" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	
+</body>
+</html>

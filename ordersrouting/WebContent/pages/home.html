@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="orderApp">
+
+<head>
+<meta charset="utf-8" />
+<title>AngularJS Plunker</title>
+<link rel="stylesheet"
+	href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+<script src="app.js"></script>
+</head>
+<body ng-controller="homeCntrl">
+<table class="table table-bordered table-hover">
+	<tr class="success">
+		<th>Order Desc</th>
+		<th>Order Amount</th>
+		<th></th>
+		<th></th>
+	</tr>
+	<tr ng-repeat="record in info" class="warning">
+		<td class="col-md-3">{{record.description}}</td>
+		<td class="col-md-3">{{record.amount}}</td>
+		<td class="col-md-3"><a href="#" ng-click="delOrder(record.id)"><img src="images/del.png" /></a></td>
+		<td class="col-md-3"><a href="#" ng-click="editOrder(record.id)"><img src="images/edit.png" /></a></td>
+	</tr>
+</table>
+</body>
