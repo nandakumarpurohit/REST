@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$("#b1").click(function() {
+			$.ajax({
+				url: "rest/kfc/brands/" + $("#t1").val()
+			}).then(function(data) {
+					console.log(data);
+					$.each(data.list,function(index)
+					{//$("#result").html(data.name + " - " + data.staffNames[0]);})
+					$("#result").append("<li>"+data.list[index].productName + " - " + data.list[index].staffNames)+"</li>";})
+				})
+		})	
+	})
+</script>
+
+</head>
+<body>
+<h1>hi to kfc</h1>
+
+<input type="text" id="t1" />
+<button id="b1">Click</button>
+
+<div id="result">
+</div>
+
+</body>
+</html>
